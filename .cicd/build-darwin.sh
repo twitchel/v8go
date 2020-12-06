@@ -3,7 +3,7 @@
 # check if v8 gitmodule is empty
 if [ ! "$(ls -A ./deps/v8)" ]
 then
-    git clone https://chromium.googlesource.com/v8/v8.git ./deps/ || exit 1
+    git clone https://chromium.googlesource.com/v8/v8.git ./deps/v8 || exit 1
     echo "v8 cloned"
 else
     echo "v8 OK"
@@ -12,7 +12,7 @@ fi
 # check if depot_tools gitmodule is empty
 if [ ! "$(ls -A ./deps/depot_tools)" ]
 then
-    git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git ./deps/ || exit 1
+    git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git ./deps/depot_tools || exit 1
     echo "depot_tools cloned"
 else
     echo "depot_tools OK"
